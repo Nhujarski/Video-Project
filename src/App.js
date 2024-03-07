@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import Input from './components/Input/Input';
+import Card from './components/Card/Card';
 
 function App() {
   const [user, setUser] = useState('');
@@ -34,14 +35,11 @@ function App() {
   }, []);
 
   return (
-    <div className='App'>
+    <Card>
       <h1>{user === '' ? 'loading...' : `Hi ${user}, welcome back!`}</h1>
-      <Input
-        placeHolder={'Please enter a user name'}
-        labelText={'User Name'}
-        labelId={'userName'}
-      />
-    </div>
+      <Input type={'text'} placeHolder={'Please enter your user name'} />
+      <Input type={'password'} placeHolder={'Please enter your password'} />
+    </Card>
   );
 }
 

@@ -1,5 +1,24 @@
 .form-input {
+    width: 300px;
     border-radius: 8px;
     font-size: 16px;
-    padding: 5px;
+    padding: 10px;
+    margin: 5px;
+    background-color: #2A2B2E;
+    border: none;
+    color: #8a2be2;
 }
+
+.form-input:focus-visible {
+    outline: none;
+    box-shadow: 0 0 10px #8a2be2, 0 0 20px #8a2be2, 0 0 30px #8a2be2; /* Multiple box shadows for the glow effect */
+    animation: neonGlow 1.5s ease-in-out infinite alternate;
+}
+@keyframes neonGlow {
+    from {
+      box-shadow: 0 0 10px #8a2be2, 0 0 20px #8a2be2, 0 0 30px #8a2be2; /* Start with glow effect */
+    }
+    to {
+      box-shadow: 0 0 20px #8a2be2, 0 0 40px #8a2be2, 0 0 60px #8a2be2; /* End with a more intense glow effect */
+    }
+  }
