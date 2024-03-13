@@ -1,0 +1,23 @@
+.button {
+    height: 50px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    font-size: 16px;
+    color: #FDFFFF;
+}
+
+.button:hover {
+    filter: brightness(1.2);
+    cursor: pointer;
+    
+}
+
+.primary {
+    background-color: #7C55D4;
+}
+
+.secondary {
+    background-color: #545B69;
+}
