@@ -35,11 +35,12 @@ function App() {
   }, []);
 
   return (
-    <Card>
-      <h1>{user === '' ? 'loading...' : `Hi ${user}, welcome back!`}</h1>
-      <Input type={'text'} placeHolder={'Please enter your user name'} />
-      <Input type={'password'} placeHolder={'Please enter your password'} />
-    </Card>
+    <div className='layout'>
+      <Card>
+        <Input type={'text'} placeHolder={'Please enter your user name'} />
+        <Input type={'password'} placeHolder={'Please enter your password'} />
+      </Card>
+    </div>
   );
 }
 
