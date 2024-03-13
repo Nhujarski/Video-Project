@@ -1,11 +1,14 @@
-.App {
-  text-align: center;
-  background-color: #212121;
+.layout {
+  background: linear-gradient(to bottom right, #B28B87,#5B5775, #806296, #2F213A);
   height: 100vh;
   width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
   color: gray;
+  display: block;
 }
 
