@@ -1,8 +1,6 @@
 .card-body {
     width: 500px;
     height: 300px;
-    display: flex;
-    flex-direction: column;
     border: none;
     background-color: #1B1D26;
     border-radius: 10px;

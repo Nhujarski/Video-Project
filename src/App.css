@@ -8,13 +8,7 @@
   justify-content: center;
 }
 
-.text-wrapper {
-    shape-outside: circle(50% at 50% 50%);
-    width: 200px; /* Adjust the width as needed */
-    height: 200px; /* Adjust the height as needed */
-    float: left; /* This ensures the text wraps around the shape */
-    margin: 20px; /* Add some margin for better visibility */
-}
+
 
 h1 {
   color: #7C55D4;
