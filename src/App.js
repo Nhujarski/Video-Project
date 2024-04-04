@@ -8,39 +8,39 @@ function App() {
   const [user, setUser] = useState('');
 
   // test data const
-  const dataToSend = {
-    userName: 'userName2',
-    password: 'userName2$',
-  };
-  const requestOptions = {
-    method: 'POST', // HTTP method
-    headers: {
-      'Content-Type': 'application/json', // Specify the content type
-      // Add any other headers if needed
-    },
-    body: JSON.stringify(dataToSend), // Convert data to JSON format
-  };
+  // userName: 'userName2',
+  //     password: 'userName2$',
 
-  const fetchData = async () => {
+  const onSubmit = async (userName, password) => {
+    const dataToSend = {
+      userName: userName,
+      password: password,
+    };
+    const requestOptions = {
+      method: 'POST', // HTTP method
+      headers: {
+        'Content-Type': 'application/json', // Specify the content type
+        // Add any other headers if needed
+      },
+      body: JSON.stringify(dataToSend), // Convert data to JSON format
+    };
     return fetch('http://localhost:3001/user/userName', requestOptions)
       .then((res) => res.json())
       .catch((error) => console.log(error))
       .then((data) => {
         setUser(data.userName);
+        console.log({ user });
       })
       .catch((error) => console.log(error));
   };
   // on render
-  useEffect(() => {
-    fetchData();
-  }, []);
 
   return (
     <div className='layout'>
       <div className='text-wrapper'>
-        <Header text='NickFlix' />
+        <Header text={user ? `Welcome, ${user}` : 'NickFlix'} />
         <Card>
-          <FormLayout />
+          <FormLayout onSubmit={onSubmit} />
         </Card>
       </div>
     </div>
