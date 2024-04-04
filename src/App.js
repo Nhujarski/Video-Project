@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import './App.css';
 import FormLayout from './components/FormLayout/FormLayout';
 import Card from './components/Card/Card';
+import Header from './components/Header/Header';
+import './App.css';
 
 function App() {
   const [user, setUser] = useState('');
@@ -37,7 +38,7 @@ function App() {
   return (
     <div className='layout'>
       <div className='text-wrapper'>
-        <h1>NickFlix</h1>
+        <Header text='NickFlix' />
         <Card>
           <FormLayout />
         </Card>
