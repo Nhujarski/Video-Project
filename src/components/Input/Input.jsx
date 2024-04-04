@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './input.css';
 
-const Input = ({ placeHolder, type, labelName, inputId }) => {
-  const [inputVal, setInputVal] = useState('');
-
+const Input = ({ placeHolder, type, labelName, inputId, onChange, Value }) => {
   return (
     <div className='input-wrapper'>
       <label for={inputId}>{labelName}</label>
@@ -11,11 +9,9 @@ const Input = ({ placeHolder, type, labelName, inputId }) => {
         id={inputId}
         className='form-input'
         type={type}
-        onChange={(e) => {
-          setInputVal(e.target.value);
-        }}
-        value={inputVal}
-        placeholder={placeHolder}></input>
+        placeholder={placeHolder}
+        value={Value}
+        onChange={onChange}></input>
     </div>
   );
 };
