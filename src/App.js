@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react';
-import FormLayout from './components/FormLayout/FormLayout';
+import { ReactDOM } from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+
+import LoginFormLayout from './components/LoginFormLayout/LoginFormLayout';
 import Card from './components/Card/Card';
 import Header from './components/Header/Header';
 import './App.css';
@@ -40,7 +43,7 @@ function App() {
       <div className='text-wrapper'>
         <Header text={user ? `Welcome, ${user}` : 'NickFlix'} />
         <Card>
-          <FormLayout onSubmit={onSubmit} />
+          <LoginFormLayout onSubmit={onSubmit} />
         </Card>
       </div>
     </div>

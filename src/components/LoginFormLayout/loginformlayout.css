@@ -1,7 +1,7 @@
 .form {
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 15px;
     align-items: center;
     justify-content: center;
     height: 90%;
@@ -10,6 +10,12 @@
 .button-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin: 10px 0;
     width: 100%;
+}
+
+.signup-link {
+    margin-top: 10px;
+    color: #FDFFFF;
+
 }

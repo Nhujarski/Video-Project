@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import './formlayout.css';
+import './loginformlayout.css';
 
 import Input from '../Input/Input';
 import Button from '../Button/Button';
 
-const FormLayout = ({ onSubmit }) => {
+const SignUpFormLayout = ({ onSubmit }) => {
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
   return (
@@ -24,7 +24,6 @@ const FormLayout = ({ onSubmit }) => {
         onChange={(e) => {
           setPassword(e.target.value);
         }}
-        Value={''}
       />
       <div className='button-container'>
         <Button
@@ -42,8 +41,11 @@ const FormLayout = ({ onSubmit }) => {
           buttonText={'Cancel'}
         />
       </div>
+      <p className='signup-link'>
+        Don't have an account? Click here to sign up!
+      </p>
     </div>
   );
 };
 
-export default FormLayout;
+export default SignUpFormLayout;
