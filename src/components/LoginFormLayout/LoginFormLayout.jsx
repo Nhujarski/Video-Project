@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import './loginformlayout.css';
 
 import Input from '../Input/Input';
@@ -42,7 +44,7 @@ const LoginFormLayout = ({ onSubmit }) => {
         />
       </div>
       <p className='signup-link'>
-        Don't have an account? Click here to sign up!
+        <Link to='/'>Don't have an account? Click here to sign up!</Link>
       </p>
     </div>
   );

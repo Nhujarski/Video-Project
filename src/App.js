@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
 import { ReactDOM } from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import LoginFormLayout from './components/LoginFormLayout/LoginFormLayout';
+import SignUpFormLayout from './components/SignUpFormLayout.jsx/SignUpFormLayout';
 import Card from './components/Card/Card';
 import Header from './components/Header/Header';
+
 import './App.css';
 
 function App() {
@@ -40,12 +42,31 @@ function App() {
 
   return (
     <div className='layout'>
-      <div className='text-wrapper'>
-        <Header text={user ? `Welcome, ${user}` : 'NickFlix'} />
-        <Card>
-          <LoginFormLayout onSubmit={onSubmit} />
-        </Card>
-      </div>
+      <BrowserRouter>
+        <div className='text-wrapper'>
+          <Header text={user ? `Welcome, ${user}` : 'NickFlix'} />
+          {/** added route for signup and login*/}
+          <Routes>
+            <Route
+              exact
+              path='/login'
+              element={
+                <Card>
+                  <LoginFormLayout onSubmit={onSubmit} />
+                </Card>
+              }
+            />
+            <Route
+              path='/'
+              element={
+                <Card>
+                  <SignUpFormLayout onSubmit={onSubmit} />
+                </Card>
+              }
+            />
+          </Routes>
+        </div>
+      </BrowserRouter>
     </div>
   );
 }
