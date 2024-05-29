@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './loginformlayout.css';
+import { Link } from 'react-router-dom';
+import './signupformlayout.css';
 
 import Input from '../Input/Input';
 import Button from '../Button/Button';
@@ -33,7 +34,7 @@ const SignUpFormLayout = ({ onSubmit }) => {
             setUserName('');
             setPassword('');
           }}
-          buttonText={'Login'}
+          buttonText={'Sign Up'}
         />
         <Button
           className={'secondary'}
@@ -42,7 +43,7 @@ const SignUpFormLayout = ({ onSubmit }) => {
         />
       </div>
       <p className='signup-link'>
-        Don't have an account? Click here to sign up!
+        <Link to='/login'>Already have an account? Click here to log in!</Link>
       </p>
     </div>
   );

@@ -1,7 +1,7 @@
 .form {
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    padding: 20px;
     align-items: center;
     justify-content: center;
     height: 90%;
@@ -14,9 +14,10 @@
     width: 100%;
 }
 
-.signup-link a{
-    margin-top: 10px;
+.signup-link a {
+    margin-top: 5px;
+    font-size: 20px;
     color: #FDFFFF;
     font-family: "Bebas Neue", sans-serif;
-
+    text-decoration: none;
 }
