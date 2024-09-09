@@ -51,7 +51,7 @@ function App() {
               exact
               path='/login'
               element={
-                <Card>
+                <Card size='large'>
                   <LoginFormLayout onSubmit={onSubmit} />
                 </Card>
               }
@@ -59,7 +59,7 @@ function App() {
             <Route
               path='/'
               element={
-                <Card>
+                <Card size='large'>
                   <SignUpFormLayout onSubmit={onSubmit} />
                 </Card>
               }
