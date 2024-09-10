@@ -1,0 +1,7 @@
+.carousel-container{
+    white-space: nowrap;
+    overflow-x: scroll;
+    padding: 20px;
+    width: 1600px;
+    display: flex;
+}

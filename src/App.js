@@ -6,6 +6,7 @@ import LoginFormLayout from './components/LoginFormLayout/LoginFormLayout';
 import SignUpFormLayout from './components/SignUpFormLayout.jsx/SignUpFormLayout';
 import Card from './components/Card/Card';
 import Header from './components/Header/Header';
+import Carousel from './components/Carousel/Carousel';
 
 import './App.css';
 
@@ -59,9 +60,52 @@ function App() {
             <Route
               path='/'
               element={
-                <Card size='large'>
-                  <SignUpFormLayout onSubmit={onSubmit} />
-                </Card>
+                <Carousel
+                  media={[
+                    <img
+                      src='/logo192.png'
+                      alt='test react logo img'
+                      width='100'
+                      height='100'
+                    />,
+                    <img
+                      src='/logo192.png'
+                      alt='test react logo img'
+                      width='100'
+                      height='100'
+                    />,
+                    <img
+                      src='/logo192.png'
+                      alt='test react logo img'
+                      width='100'
+                      height='100'
+                    />,
+                    <img
+                      src='/logo192.png'
+                      alt='test react logo img'
+                      width='100'
+                      height='100'
+                    />,
+                    <img
+                      src='/logo192.png'
+                      alt='test react logo img'
+                      width='100'
+                      height='100'
+                    />,
+                    <img
+                      src='/logo192.png'
+                      alt='test react logo img'
+                      width='100'
+                      height='100'
+                    />,
+                    <img
+                      src='/logo192.png'
+                      alt='test react logo img'
+                      width='100'
+                      height='100'
+                    />,
+                  ]}
+                />
               }
             />
           </Routes>
